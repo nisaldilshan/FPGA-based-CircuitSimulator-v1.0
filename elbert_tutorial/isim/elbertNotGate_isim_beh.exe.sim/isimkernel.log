@@ -1,0 +1,28 @@
+Command line:
+   elbertNotGate_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  51120
+
+Mon Apr 03 17:29:45 2017
+
+
+ Elaboration Time: 0.0625 sec
+
+ Current Memory Usage: 845.832 Meg
+
+ Total Signals          : 25
+ Total Nets             : 129
+ Total Signal Drivers   : 13
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 17
+ Total Traceable Variables  : 29
+ Total Scalar Nets and Variables : 407
+
+ Total Simulation Time: 0.0625 sec
+
+ Current Memory Usage: 845.832 Meg
+
+Mon Apr 03 17:29:49 2017
+
