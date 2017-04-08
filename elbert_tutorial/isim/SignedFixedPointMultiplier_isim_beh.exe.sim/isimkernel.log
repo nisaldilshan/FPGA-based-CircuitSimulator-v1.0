@@ -1,0 +1,28 @@
+Command line:
+   SignedFixedPointMultiplier_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  51365
+
+Fri Apr 07 08:33:55 2017
+
+
+ Elaboration Time: 0.15625 sec
+
+ Current Memory Usage: 872.452 Meg
+
+ Total Signals          : 17
+ Total Nets             : 79
+ Total Signal Drivers   : 7
+ Total Blocks           : 2
+ Total Primitive Blocks : 2
+ Total Processes        : 9
+ Total Traceable Variables  : 23
+ Total Scalar Nets and Variables : 255
+
+ Total Simulation Time: 0.171875 sec
+
+ Current Memory Usage: 872.452 Meg
+
+Fri Apr 07 08:34:00 2017
+
