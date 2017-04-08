@@ -1,1 +1,3 @@
+verilog work "SignedMultiplier_16bit.v"
+verilog work "SignedFixedPointMultiplier.v"
 verilog work "elbertNotGate.v"

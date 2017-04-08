@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Users/Nisal Dilshan/Desktop/FYP/ISE projects/1/elbert_tutorial/SignedMultiplier_16bit.v";
+static const char *ng0 = "C:/Users/Nisal Dilshan/Desktop/FYP/ISE projects/1/FPGA-based-CircuitSimulator-v1.0/elbert_tutorial/SignedMultiplier_16bit.v";
 static unsigned int ng1[] = {0U, 0U};
 static unsigned int ng2[] = {0U, 0U, 0U, 0U};
 
