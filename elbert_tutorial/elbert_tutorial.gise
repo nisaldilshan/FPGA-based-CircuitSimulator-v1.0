@@ -53,7 +53,6 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="elbertNotGate.unroutes" xil_pn:subbranch="Par"/>
     <file xil_pn:fileType="FILE_XPI" xil_pn:name="elbertNotGate.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="elbertNotGate.xst"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="elbertNotGate_beh.prj"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="elbertNotGate_envsettings.html"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="elbertNotGate_guide.ncd" xil_pn:origination="imported"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="elbertNotGate_isim_beh.exe"/>
@@ -88,23 +87,18 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1491534246" xil_pn:in_ck="95713904475951872" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1491534246">
+    <transform xil_pn:end_ts="1492578584" xil_pn:in_ck="2204070063751968353" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1492578584">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="SignedFixedPointMultiplier.v"/>
       <outfile xil_pn:name="SignedMultiplier_16bit.v"/>
       <outfile xil_pn:name="elbertNotGate.v"/>
       <outfile xil_pn:name="test_bench.v"/>
     </transform>
-    <transform xil_pn:end_ts="1491534246" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-1562487087229302858" xil_pn:start_ts="1491534246">
+    <transform xil_pn:end_ts="1492577446" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-1562487087229302858" xil_pn:start_ts="1492577446">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1491534246" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-155079048639271938" xil_pn:start_ts="1491534246">
+    <transform xil_pn:end_ts="1492577446" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-155079048639271938" xil_pn:start_ts="1492577446">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -112,27 +106,17 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1491534246" xil_pn:in_ck="95713904475951872" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1491534246">
+    <transform xil_pn:end_ts="1492578584" xil_pn:in_ck="2204070063751968353" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1492578584">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="SignedFixedPointMultiplier.v"/>
       <outfile xil_pn:name="SignedMultiplier_16bit.v"/>
       <outfile xil_pn:name="elbertNotGate.v"/>
       <outfile xil_pn:name="test_bench.v"/>
     </transform>
-    <transform xil_pn:end_ts="1491534249" xil_pn:in_ck="95713904475951872" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-4064821025870609847" xil_pn:start_ts="1491534246">
+    <transform xil_pn:end_ts="1492578587" xil_pn:in_ck="2204070063751968353" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-4064821025870609847" xil_pn:start_ts="1492578584">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
@@ -141,11 +125,9 @@
       <outfile xil_pn:name="test_bench_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1491534249" xil_pn:in_ck="-841031095565865716" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-1419685643494628500" xil_pn:start_ts="1491534249">
+    <transform xil_pn:end_ts="1492578587" xil_pn:in_ck="-841031095565865716" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-1419685643494628500" xil_pn:start_ts="1492578587">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="isim.cmd"/>
@@ -187,20 +169,9 @@
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name=".lso"/>
-      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
-      <outfile xil_pn:name="elbertNotGate.lso"/>
-      <outfile xil_pn:name="elbertNotGate.ngc"/>
-      <outfile xil_pn:name="elbertNotGate.ngr"/>
-      <outfile xil_pn:name="elbertNotGate.prj"/>
-      <outfile xil_pn:name="elbertNotGate.stx"/>
-      <outfile xil_pn:name="elbertNotGate.syr"/>
-      <outfile xil_pn:name="elbertNotGate.xst"/>
-      <outfile xil_pn:name="elbertNotGate_beh.prj"/>
-      <outfile xil_pn:name="elbertNotGate_xst.xrpt"/>
-      <outfile xil_pn:name="webtalk_pn.xml"/>
-      <outfile xil_pn:name="xst"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1491531711" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-314050665070230830" xil_pn:start_ts="1491531711">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -209,49 +180,38 @@
     <transform xil_pn:end_ts="1491533797" xil_pn:in_ck="-8836882002603341034" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="5139328385579788832" xil_pn:start_ts="1491533790">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
-      <outfile xil_pn:name="_ngo"/>
-      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
-      <outfile xil_pn:name="elbertNotGate.bld"/>
-      <outfile xil_pn:name="elbertNotGate.ngd"/>
-      <outfile xil_pn:name="elbertNotGate_ngdbuild.xrpt"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1491533805" xil_pn:in_ck="-8836882002603341033" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="1761500947287708787" xil_pn:start_ts="1491533797">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
-      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
-      <outfile xil_pn:name="elbertNotGate.pcf"/>
-      <outfile xil_pn:name="elbertNotGate_map.map"/>
-      <outfile xil_pn:name="elbertNotGate_map.mrp"/>
-      <outfile xil_pn:name="elbertNotGate_map.ncd"/>
-      <outfile xil_pn:name="elbertNotGate_map.ngm"/>
-      <outfile xil_pn:name="elbertNotGate_map.xrpt"/>
-      <outfile xil_pn:name="elbertNotGate_summary.xml"/>
-      <outfile xil_pn:name="elbertNotGate_usage.xml"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1491533831" xil_pn:in_ck="-8825459915510542928" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="4891759239423368658" xil_pn:start_ts="1491533805">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
-      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
-      <outfile xil_pn:name="elbertNotGate.ncd"/>
-      <outfile xil_pn:name="elbertNotGate.pad"/>
-      <outfile xil_pn:name="elbertNotGate.par"/>
-      <outfile xil_pn:name="elbertNotGate.ptwx"/>
-      <outfile xil_pn:name="elbertNotGate.unroutes"/>
-      <outfile xil_pn:name="elbertNotGate.xpi"/>
-      <outfile xil_pn:name="elbertNotGate_pad.csv"/>
-      <outfile xil_pn:name="elbertNotGate_pad.txt"/>
-      <outfile xil_pn:name="elbertNotGate_par.xrpt"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1491533831" xil_pn:in_ck="-8836882002603341165" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1491533827">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
-      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
-      <outfile xil_pn:name="elbertNotGate.twr"/>
-      <outfile xil_pn:name="elbertNotGate.twx"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
   </transforms>
 
