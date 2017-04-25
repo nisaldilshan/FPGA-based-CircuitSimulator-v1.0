@@ -1,4 +1,0 @@
-verilog work "SignedMultiplier_16bit.v"
-verilog work "SignedFixedPointMultiplier.v"
-verilog work "elbertNotGate.v"
-verilog work "F:/XilinxISE/14.7/ISE_DS/ISE//verilog/src/glbl.v"

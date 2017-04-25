@@ -4,8 +4,8 @@
 
 	input signed [15:0] dataa, datab,
 	input 		clock, aclr,
-	output reg 	[15:0] result1,
-	output reg 	[15:0] result2	
+	output signed reg 	[15:0] result1,
+	output signed reg 	[15:0] result2	
     );
 		
 	reg signed	[15:0] dataa_reg, datab_reg;

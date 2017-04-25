@@ -1,0 +1,590 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.95 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.95 secs
+ 
+--> Reading design: top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top"
+Output Format                      : NGC
+Target Device                      : xc3s250e-4-cp132
+
+---- Source Options
+Top Module Name                    : top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "top.v" in library work
+Module <top> compiled
+No errors in compilation
+Analysis of file <"top.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <top> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <top>.
+WARNING:Xst:905 - "top.v" line 38: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <r_counter>, <a>, <v_1>, <v_2>, <CONST_1>, <CONST_3>, <i_l>, <i_c>, <CONST_2>, <r_e_val>, <CONST_4>
+Module <top> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <top>.
+    Related source file is "top.v".
+WARNING:Xst:647 - Input <clk_i> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <v_2<63:48>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <v_2<15:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:737 - Found 32-bit latch for signal <r_e_val>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 64-bit latch for signal <i_l>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 64-bit latch for signal <i_c>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 64-bit latch for signal <v_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <v_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:643 - "top.v" line 57: The result of a 33x33-bit multiplication is partially used. Only the 64 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "top.v" line 62: The result of a 33x32-bit multiplication is partially used. Only the 64 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+    Found 1-bit adder for signal <a>.
+    Found 64-bit subtractor for signal <i_c$sub0000> created at line 58.
+    Found 64-bit adder for signal <i_l$add0000> created at line 57.
+    Found 33-bit subtractor for signal <i_l$addsub0000> created at line 57.
+    Found 33x33-bit multiplier for signal <i_l$mult0001> created at line 57.
+    Found 10-bit adder for signal <r_counter$share0000>.
+    Found 10-bit comparator less for signal <r_e_val$cmp_lt0000> created at line 45.
+    Found 10-bit comparator less for signal <r_e_val$cmp_lt0001> created at line 40.
+    Found 64-bit adder for signal <v_2$add0000> created at line 62.
+    Found 32-bit adder carry out for signal <v_2$addsub0001> created at line 62.
+    Found 33x32-bit multiplier for signal <v_2$mult0001> created at line 62.
+    Found 32x32-bit multiplier for signal <v_2$mult0002> created at line 62.
+    Summary:
+	inferred   7 Adder/Subtractor(s).
+	inferred   3 Multiplier(s).
+	inferred   2 Comparator(s).
+	inferred  32 Multiplexer(s).
+Unit <top> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 3
+ 32x32-bit multiplier                                  : 1
+ 33x32-bit multiplier                                  : 1
+ 33x33-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 7
+ 1-bit adder                                           : 1
+ 10-bit adder                                          : 1
+ 32-bit adder carry out                                : 1
+ 33-bit subtractor                                     : 1
+ 64-bit adder                                          : 2
+ 64-bit subtractor                                     : 1
+# Latches                                              : 5
+ 32-bit latch                                          : 2
+ 64-bit latch                                          : 3
+# Comparators                                          : 2
+ 10-bit comparator less                                : 2
+# Multiplexers                                         : 1
+ 32-bit 4-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <31>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <30>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <29>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <28>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <27>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <26>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <25>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <24>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <23>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <22>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <21>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <20>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <18>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <15>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <13>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <9>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <0>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 3
+ 32x32-bit multiplier                                  : 1
+ 33x32-bit multiplier                                  : 1
+ 33x33-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 7
+ 1-bit adder                                           : 1
+ 10-bit adder                                          : 1
+ 32-bit adder carry out                                : 1
+ 33-bit subtractor                                     : 1
+ 64-bit adder                                          : 2
+ 64-bit subtractor                                     : 1
+# Latches                                              : 5
+ 32-bit latch                                          : 2
+ 64-bit latch                                          : 3
+# Comparators                                          : 2
+ 10-bit comparator less                                : 2
+# Multiplexers                                         : 1
+ 32-bit 4-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <31> in Unit <LPM_LATCH_1> is equivalent to the following 29 FFs/Latches, which will be removed : <30> <29> <28> <27> <26> <25> <24> <23> <22> <21> <20> <18> <16> <15> <14> <13> <12> <11> <10> <9> <8> <7> <6> <5> <4> <3> <2> <1> <0> 
+INFO:Xst:2261 - The FF/Latch <19> in Unit <LPM_LATCH_1> is equivalent to the following FF/Latch, which will be removed : <17> 
+WARNING:Xst:1293 - FF/Latch <31> has a constant value of 0 in block <LPM_LATCH_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <v_1_31> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <v_1_30> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <v_1_29> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <v_1_28> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <v_1_27> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <v_1_26> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <v_1_25> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <v_1_24> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <v_1_23> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <v_1_22> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <v_1_21> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <v_1_20> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <v_1_18> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <v_1_16> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <v_1_15> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <v_1_14> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <v_1_13> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <v_1_12> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <v_1_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <v_1_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <v_1_9> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <v_1_8> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <v_1_7> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <v_1_6> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <v_1_5> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <v_1_4> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <v_1_3> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <v_1_2> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <v_1_1> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <v_1_0> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <v_2_0> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <v_2_1> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <v_2_2> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <v_2_3> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <v_2_4> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <v_2_5> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <v_2_6> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <v_2_7> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <v_2_8> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <v_2_9> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <v_2_10> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <v_2_11> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <v_2_12> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <v_2_13> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <v_2_14> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <v_2_15> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <v_2_48> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <v_2_49> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <v_2_50> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <v_2_51> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <v_2_52> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <v_2_53> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <v_2_54> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <v_2_55> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <v_2_56> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <v_2_57> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <v_2_58> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <v_2_59> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <v_2_60> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <v_2_61> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <v_2_62> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <v_2_63> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <i_c_48> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <i_c_49> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <i_c_50> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <i_c_51> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <i_c_52> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <i_c_53> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <i_c_54> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <i_c_55> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <i_c_56> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <i_c_57> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <i_c_58> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <i_c_59> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <i_c_60> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <i_c_61> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <i_c_62> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <i_c_63> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <i_l_48> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <i_l_49> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <i_l_50> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <i_l_51> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <i_l_52> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <i_l_53> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <i_l_54> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <i_l_55> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <i_l_56> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <i_l_57> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <i_l_58> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <i_l_59> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <i_l_60> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <i_l_61> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <i_l_62> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <i_l_63> of sequential type is unconnected in block <top>.
+INFO:Xst:2261 - The FF/Latch <v_1_17> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <v_1_19> 
+WARNING:Xst:2170 - Unit top : the following signal(s) form a combinatorial loop: _old_r_e_val_1<19>, r_counter<9>, r_e_val_cmp_lt0001.
+WARNING:Xst:2170 - Unit top : the following signal(s) form a combinatorial loop: Madd_r_counter_share0000_cy<7>, Madd_r_counter_share0000_lut<0>, r_counter_share0000<8>, r_e_val_cmp_lt0000, Madd_r_counter_share0000_cy<6>, r_counter_share0000<0>, Madd_r_counter_share0000_cy<3>, Madd_r_counter_share0000_cy<2>, Madd_r_counter_share0000_cy<4>, r_counter<8>, Madd_r_counter_share0000_cy<5>, r_counter<0>, Madd_r_counter_share0000_cy<1>, Madd_r_counter_share0000_cy<0>.
+WARNING:Xst:2170 - Unit top : the following signal(s) form a combinatorial loop: a_out.
+WARNING:Xst:2016 - Found a loop when searching source clock on port 'Madd_a_xor<0>1:O'
+Last warning will be issued only once.
+
+Optimizing unit <top> ...
+
+Mapping all equations...
+WARNING:Xst:2170 - Unit top : the following signal(s) form a combinatorial loop: r_counter_share0000<7>, r_counter<7>, _old_r_e_val_1<19>, r_e_val_cmp_lt0000.
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 7.
+Latch v_1_17 has been replicated 2 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : top.ngr
+Top Level Output File Name         : top
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 66
+
+Cell Usage :
+# BELS                             : 887
+#      GND                         : 1
+#      INV                         : 49
+#      LUT2                        : 257
+#      LUT3                        : 3
+#      LUT4                        : 4
+#      MUXCY                       : 289
+#      MUXF5                       : 2
+#      VCC                         : 1
+#      XORCY                       : 281
+# FlipFlops/Latches                : 132
+#      LD                          : 35
+#      LD_1                        : 96
+#      LDC                         : 1
+# IO Buffers                       : 65
+#      OBUF                        : 65
+# MULTs                            : 6
+#      MULT18X18SIO                : 6
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s250ecp132-4 
+
+ Number of Slices:                      178  out of   2448     7%  
+ Number of Slice Flip Flops:            130  out of   4896     2%  
+ Number of 4 input LUTs:                313  out of   4896     6%  
+ Number of IOs:                          66
+ Number of bonded IOBs:                  65  out of     92    70%  
+    IOB Flip Flops:                       2
+ Number of MULT18X18SIOs:                 6  out of     12    50%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------------+------------------------+-------+
+Clock Signal                             | Clock buffer(FF name)  | Load  |
+-----------------------------------------+------------------------+-------+
+a_out_OBUF(Madd_a_xor<0>1_INV_0:O)       | NONE(*)(v_1_17)        | 131   |
+r_e_val_cmp_lt0000(r_e_val_cmp_lt00001:O)| NONE(*)(r_e_val_19)    | 1     |
+-----------------------------------------+------------------------+-------+
+(*) These 2 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+----------------------------------------------+------------------------+-------+
+Control Signal                                | Buffer(FF name)        | Load  |
+----------------------------------------------+------------------------+-------+
+r_e_val_cmp_lt0001(r_e_val_cmp_lt0001142_f5:O)| NONE(r_e_val_19)       | 1     |
+----------------------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 33.356ns (Maximum Frequency: 29.980MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 4.479ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'a_out_OBUF'
+  Clock period: 33.356ns (frequency: 29.980MHz)
+  Total number of paths / destination ports: 18329858 / 128
+-------------------------------------------------------------------------
+Delay:               16.678ns (Levels of Logic = 54)
+  Source:            v_2_16 (LATCH)
+  Destination:       i_l_47 (LATCH)
+  Source Clock:      a_out_OBUF rising
+  Destination Clock: a_out_OBUF falling
+
+  Data Path: v_2_16 to i_l_47
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               3   0.676   0.531  v_2_16 (v_2_16)
+     INV:I->O              1   0.704   0.000  Msub_i_l_addsub0000_lut<0>1_INV_0 (Msub_i_l_addsub0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  Msub_i_l_addsub0000_cy<0> (Msub_i_l_addsub0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  Msub_i_l_addsub0000_cy<1> (Msub_i_l_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Msub_i_l_addsub0000_cy<2> (Msub_i_l_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Msub_i_l_addsub0000_cy<3> (Msub_i_l_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Msub_i_l_addsub0000_cy<4> (Msub_i_l_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Msub_i_l_addsub0000_cy<5> (Msub_i_l_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Msub_i_l_addsub0000_cy<6> (Msub_i_l_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Msub_i_l_addsub0000_cy<7> (Msub_i_l_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Msub_i_l_addsub0000_cy<8> (Msub_i_l_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Msub_i_l_addsub0000_cy<9> (Msub_i_l_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Msub_i_l_addsub0000_cy<10> (Msub_i_l_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Msub_i_l_addsub0000_cy<11> (Msub_i_l_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Msub_i_l_addsub0000_cy<12> (Msub_i_l_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  Msub_i_l_addsub0000_cy<13> (Msub_i_l_addsub0000_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  Msub_i_l_addsub0000_cy<14> (Msub_i_l_addsub0000_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  Msub_i_l_addsub0000_cy<15> (Msub_i_l_addsub0000_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  Msub_i_l_addsub0000_cy<16> (Msub_i_l_addsub0000_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  Msub_i_l_addsub0000_cy<17> (Msub_i_l_addsub0000_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  Msub_i_l_addsub0000_cy<18> (Msub_i_l_addsub0000_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  Msub_i_l_addsub0000_cy<19> (Msub_i_l_addsub0000_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  Msub_i_l_addsub0000_cy<20> (Msub_i_l_addsub0000_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  Msub_i_l_addsub0000_cy<21> (Msub_i_l_addsub0000_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  Msub_i_l_addsub0000_cy<22> (Msub_i_l_addsub0000_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  Msub_i_l_addsub0000_cy<23> (Msub_i_l_addsub0000_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  Msub_i_l_addsub0000_cy<24> (Msub_i_l_addsub0000_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  Msub_i_l_addsub0000_cy<25> (Msub_i_l_addsub0000_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  Msub_i_l_addsub0000_cy<26> (Msub_i_l_addsub0000_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  Msub_i_l_addsub0000_cy<27> (Msub_i_l_addsub0000_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  Msub_i_l_addsub0000_cy<28> (Msub_i_l_addsub0000_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  Msub_i_l_addsub0000_cy<29> (Msub_i_l_addsub0000_cy<29>)
+     MUXCY:CI->O           1   0.059   0.000  Msub_i_l_addsub0000_cy<30> (Msub_i_l_addsub0000_cy<30>)
+     MUXCY:CI->O           0   0.059   0.000  Msub_i_l_addsub0000_cy<31> (Msub_i_l_addsub0000_cy<31>)
+     XORCY:CI->O           3   0.804   0.531  Msub_i_l_addsub0000_xor<32> (i_l_addsub0000<32>)
+     MULT18X18SIO:A15->P15    1   4.834   0.499  Mmult_i_l_mult00011 (Mmult_i_l_mult00011_P_to_Adder_B_15)
+     LUT2:I1->O            1   0.704   0.000  Mmult_i_l_mult00010_Madd_lut<32> (Mmult_i_l_mult00010_Madd_lut<32>)
+     MUXCY:S->O            1   0.464   0.000  Mmult_i_l_mult00010_Madd_cy<32> (Mmult_i_l_mult00010_Madd_cy<32>)
+     MUXCY:CI->O           1   0.059   0.000  Mmult_i_l_mult00010_Madd_cy<33> (Mmult_i_l_mult00010_Madd_cy<33>)
+     MUXCY:CI->O           1   0.059   0.000  Mmult_i_l_mult00010_Madd_cy<34> (Mmult_i_l_mult00010_Madd_cy<34>)
+     MUXCY:CI->O           1   0.059   0.000  Mmult_i_l_mult00010_Madd_cy<35> (Mmult_i_l_mult00010_Madd_cy<35>)
+     MUXCY:CI->O           1   0.059   0.000  Mmult_i_l_mult00010_Madd_cy<36> (Mmult_i_l_mult00010_Madd_cy<36>)
+     MUXCY:CI->O           1   0.059   0.000  Mmult_i_l_mult00010_Madd_cy<37> (Mmult_i_l_mult00010_Madd_cy<37>)
+     MUXCY:CI->O           1   0.059   0.000  Mmult_i_l_mult00010_Madd_cy<38> (Mmult_i_l_mult00010_Madd_cy<38>)
+     MUXCY:CI->O           1   0.059   0.000  Mmult_i_l_mult00010_Madd_cy<39> (Mmult_i_l_mult00010_Madd_cy<39>)
+     MUXCY:CI->O           0   0.059   0.000  Mmult_i_l_mult00010_Madd_cy<40> (Mmult_i_l_mult00010_Madd_cy<40>)
+     XORCY:CI->O           7   0.804   0.787  Mmult_i_l_mult00010_Madd_xor<41> (i_l_mult0001<41>)
+     LUT2:I1->O            1   0.704   0.000  Madd_i_l_add0000_lut<41> (Madd_i_l_add0000_lut<41>)
+     MUXCY:S->O            1   0.464   0.000  Madd_i_l_add0000_cy<41> (Madd_i_l_add0000_cy<41>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_i_l_add0000_cy<42> (Madd_i_l_add0000_cy<42>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_i_l_add0000_cy<43> (Madd_i_l_add0000_cy<43>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_i_l_add0000_cy<44> (Madd_i_l_add0000_cy<44>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_i_l_add0000_cy<45> (Madd_i_l_add0000_cy<45>)
+     MUXCY:CI->O           0   0.059   0.000  Madd_i_l_add0000_cy<46> (Madd_i_l_add0000_cy<46>)
+     XORCY:CI->O           1   0.804   0.000  Madd_i_l_add0000_xor<47> (i_l_add0000<47>)
+     LD_1:D                    0.308          i_l_47
+    ----------------------------------------
+    Total                     16.678ns (14.330ns logic, 2.348ns route)
+                                       (85.9% logic, 14.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'a_out_OBUF'
+  Total number of paths / destination ports: 34 / 34
+-------------------------------------------------------------------------
+Offset:              4.479ns (Levels of Logic = 1)
+  Source:            v_2_31 (LATCH)
+  Destination:       v_2d_o<15> (PAD)
+  Source Clock:      a_out_OBUF rising
+
+  Data Path: v_2_31 to v_2d_o<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               3   0.676   0.531  v_2_31 (v_2_31)
+     OBUF:I->O                 3.272          v_2d_o_15_OBUF (v_2d_o<15>)
+    ----------------------------------------
+    Total                      4.479ns (3.948ns logic, 0.531ns route)
+                                       (88.1% logic, 11.9% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 10.46 secs
+ 
+--> 
+
+Total memory usage is 342372 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  140 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+
