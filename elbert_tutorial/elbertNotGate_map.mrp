@@ -9,30 +9,35 @@ Target Device  : xc3s50a
 Target Package : tq144
 Target Speed   : -4
 Mapper Version : spartan3a -- $Revision: 1.55 $
-Mapped Date    : Fri Apr 07 08:26:40 2017
+Mapped Date    : Wed Apr 26 21:02:06 2017
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    0
 Logic Utilization:
-  Number of Slice Flip Flops:            27 out of   1,408    1%
-  Number of 4 input LUTs:                 3 out of   1,408    1%
+  Number of Slice Flip Flops:           226 out of   1,408   16%
+  Number of 4 input LUTs:               497 out of   1,408   35%
 Logic Distribution:
-  Number of occupied Slices:             15 out of     704    2%
-    Number of Slices containing only related logic:      15 out of      15 100%
-    Number of Slices containing unrelated logic:          0 out of      15   0%
+  Number of occupied Slices:            331 out of     704   47%
+    Number of Slices containing only related logic:     331 out of     331 100%
+    Number of Slices containing unrelated logic:          0 out of     331   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:           3 out of   1,408    1%
-  Number of bonded IOBs:                 82 out of     108   75%
-  Number of BUFGMUXs:                     1 out of      24    4%
-  Number of MULT18X18SIOs:                1 out of       3   33%
+  Total Number of 4 input LUTs:         609 out of   1,408   43%
+    Number used as logic:               497
+    Number used as a route-thru:        112
 
-Average Fanout of Non-Clock Nets:                1.41
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
 
-Peak Memory Usage:  342 MB
-Total REAL time to MAP completion:  3 secs 
-Total CPU time to MAP completion:   1 secs 
+  Number of bonded IOBs:                 15 out of     108   13%
+  Number of BUFGMUXs:                     2 out of      24    8%
+
+Average Fanout of Non-Clock Nets:                1.81
+
+Peak Memory Usage:  357 MB
+Total REAL time to MAP completion:  2 secs 
+Total CPU time to MAP completion:   2 secs 
 
 NOTES:
 
@@ -77,21 +82,38 @@ Section 2 - Warnings
 Section 3 - Informational
 -------------------------
 INFO:MapLib:562 - No environment variables are currently set.
+INFO:MapLib:159 - Net Timing constraints on signal Clk are pushed forward
+   through input buffer.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew
    rate limited output drivers. The delay on speed critical single ended outputs
    can be dramatically reduced by designating them as fast outputs.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-   2 block(s) optimized away
+   2 block(s) removed
+   5 block(s) optimized away
+   2 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
+
+The trimmed logic reported below is either:
+   1. part of a cycle
+   2. part of disabled logic
+   3. a side-effect of other trimmed logic
+
+The signal "k2/Madd_v_2_add0000_cy<15>_rt" is unused and has been removed.
+ Unused block "k2/Madd_v_2_add0000_cy<15>_rt" (ROM) removed.
+  The signal "k2/Madd_v_2_add0000_lut<15>" is unused and has been removed.
+   Unused block "k2/Mmult_v_2_mult0001_Madd4_xor<15>" (XOR) removed.
 
 Optimized Block(s):
 TYPE 		BLOCK
 GND 		XST_GND
 VCC 		XST_VCC
+MUXCY 		k2/Madd_v_2_add0000_cy<15>
+MUXCY 		k2/Mmult_v_2_mult0002_Madd3_cy<13>
+MUXCY 		k2/Mmult_v_2_mult0002_Madd3_cy<8>
 
 To enable printing of redundant blocks removed and signals merged, set the
 detailed map report option and rerun map.
@@ -103,88 +125,21 @@ Section 6 - IOB Properties
 | IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew    | Reg (s)      | Resistor | IBUF/IFD | SUSPEND          |
 |                                    |                  |           |                      | Term  | Strength | Rate    |              |          | Delay    |                  |
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| A                                  | IBUF             | INPUT     | LVCMOS25             |       |          |         |              |          | 0 / 0    |                  |
-| B                                  | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| E<0>                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| E<1>                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| E<2>                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| E<3>                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| E<4>                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| E<5>                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| E<6>                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| E<7>                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| E<8>                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| E<9>                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| E<10>                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| E<11>                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| E<12>                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| E<13>                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| E<14>                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| E<15>                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result1<0>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result1<1>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result1<2>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result1<3>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result1<4>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result1<5>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result1<6>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result1<7>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result1<8>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result1<9>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result1<10>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result1<11>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result1<12>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result1<13>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result1<14>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result1<15>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result1<16>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result1<17>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result1<18>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result1<19>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result1<20>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result1<21>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result1<22>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result1<23>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result1<24>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result1<25>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result1<26>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result1<27>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result1<28>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result1<29>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result1<30>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result1<31>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result2fra<0>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result2fra<1>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result2fra<2>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result2fra<3>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result2fra<4>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result2fra<5>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result2fra<6>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result2fra<7>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result2fra<8>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result2fra<9>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result2fra<10>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result2fra<11>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result2fra<12>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result2fra<13>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result2fra<14>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result2fra<15>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result2int<0>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result2int<1>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result2int<2>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result2int<3>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result2int<4>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result2int<5>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result2int<6>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result2int<7>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result2int<8>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result2int<9>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result2int<10>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result2int<11>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result2int<12>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result2int<13>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result2int<14>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| result2int<15>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| B                                  | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| Clk                                | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
+| Enable_0                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| Enable_1                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| Enable_2                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| SevenSegment_0                     | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| SevenSegment_1                     | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| SevenSegment_2                     | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| SevenSegment_3                     | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| SevenSegment_4                     | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| SevenSegment_5                     | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| SevenSegment_6                     | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| SevenSegment_7                     | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| Switch_0                           | IBUF             | INPUT     | LVCMOS33             |       |          |         |              | PULLUP   | 0 / 0    |                  |
+| clk1                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Section 7 - RPMs

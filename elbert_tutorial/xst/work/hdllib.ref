@@ -1,3 +1,8 @@
 MO SignedFixedPointMultiplier NULL SignedFixedPointMultiplier.v vlg17/_signed_fixed_point_multiplier.bin 1491533784
-MO elbertNotGate NULL elbertNotGate.v vlg2C/elbert_not_gate.bin 1491533784
+MO Sevn_segment_display NULL Sevn_segment_display.v vlg7F/_sevn__segment__display.bin 1493220711
+MO average NULL average.v vlg77/average.bin 1493220711
+MO elbertNotGate NULL elbertNotGate.v vlg2C/elbert_not_gate.bin 1493220711
+MO clock_divider NULL clock_divider.v vlg1E/clock__divider.bin 1493220711
+MO SEVEN_SEGMENT_LUT NULL SEVEN_SEGMENT_LUT.v vlg0B/_s_e_v_e_n___s_e_g_m_e_n_t___l_u_t.bin 1493220711
+MO buck_converter NULL buck_converter.v vlg64/buck__converter.bin 1493220711
 MO SignedMultiplier_16bit NULL SignedMultiplier_16bit.v vlg5E/_signed_multiplier__16bit.bin 1491533784

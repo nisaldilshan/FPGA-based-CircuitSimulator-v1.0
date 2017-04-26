@@ -26,7 +26,7 @@ static int ng1[] = {0, 0};
 
 
 
-static void Always_13_0(char *t0)
+static void Always_14_0(char *t0)
 {
     char t3[8];
     char *t1;
@@ -43,23 +43,23 @@ static void Always_13_0(char *t0)
     char *t13;
     char *t14;
 
-LAB0:    t1 = (t0 + 2848U);
+LAB0:    t1 = (t0 + 3008U);
     t2 = *((char **)t1);
     if (t2 == 0)
         goto LAB2;
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(13, ng0);
+LAB2:    xsi_set_current_line(14, ng0);
 
-LAB4:    xsi_set_current_line(14, ng0);
-    t2 = (t0 + 2656);
+LAB4:    xsi_set_current_line(15, ng0);
+    t2 = (t0 + 2816);
     xsi_process_wait(t2, 1000LL);
     *((char **)t1) = &&LAB5;
 
 LAB1:    return;
-LAB5:    xsi_set_current_line(14, ng0);
-    t4 = (t0 + 1928);
+LAB5:    xsi_set_current_line(15, ng0);
+    t4 = (t0 + 2088);
     t5 = (t4 + 56U);
     t6 = *((char **)t5);
     memset(t3, 0, 8);
@@ -79,7 +79,7 @@ LAB8:    t13 = (t3 + 4);
     *((unsigned int *)t3) = 1;
     *((unsigned int *)t13) = 1;
 
-LAB9:    t14 = (t0 + 1928);
+LAB9:    t14 = (t0 + 2088);
     xsi_vlogvar_assign_value(t14, t3, 0, 0, 1);
     goto LAB2;
 
@@ -88,41 +88,41 @@ LAB6:    *((unsigned int *)t3) = 1;
 
 }
 
-static void Initial_17_1(char *t0)
+static void Initial_18_1(char *t0)
 {
     char *t1;
     char *t2;
     char *t3;
 
-LAB0:    t1 = (t0 + 3096U);
+LAB0:    t1 = (t0 + 3256U);
     t2 = *((char **)t1);
     if (t2 == 0)
         goto LAB2;
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(17, ng0);
+LAB2:    xsi_set_current_line(18, ng0);
 
-LAB4:    xsi_set_current_line(18, ng0);
+LAB4:    xsi_set_current_line(19, ng0);
     t2 = ((char*)((ng1)));
-    t3 = (t0 + 1928);
+    t3 = (t0 + 2088);
     xsi_vlogvar_assign_value(t3, t2, 0, 0, 1);
-    xsi_set_current_line(20, ng0);
-    t2 = (t0 + 2904);
-    xsi_process_wait(t2, 200000LL);
+    xsi_set_current_line(21, ng0);
+    t2 = (t0 + 3064);
+    xsi_process_wait(t2, 1000000000LL);
     *((char **)t1) = &&LAB5;
 
 LAB1:    return;
-LAB5:    xsi_set_current_line(21, ng0);
+LAB5:    xsi_set_current_line(22, ng0);
     xsi_vlog_finish(1);
     goto LAB1;
 
 }
 
 
-extern void work_m_00000000002895081694_2578365841_init()
+extern void work_m_00000000003813820252_2578365841_init()
 {
-	static char *pe[] = {(void *)Always_13_0,(void *)Initial_17_1};
-	xsi_register_didat("work_m_00000000002895081694_2578365841", "isim/test_bench_isim_beh.exe.sim/work/m_00000000002895081694_2578365841.didat");
+	static char *pe[] = {(void *)Always_14_0,(void *)Initial_18_1};
+	xsi_register_didat("work_m_00000000003813820252_2578365841", "isim/test_bench_isim_beh.exe.sim/work/m_00000000003813820252_2578365841.didat");
 	xsi_register_executes(pe);
 }

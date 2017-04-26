@@ -1,4 +1,5 @@
-verilog work "SignedMultiplier_16bit.v"
+verilog work "clock_divider.v"
+verilog work "buck_converter.v"
 verilog work "elbertNotGate.v"
 verilog work "test_bench.v"
 verilog work "F:/XilinxISE/14.7/ISE_DS/ISE//verilog/src/glbl.v"
