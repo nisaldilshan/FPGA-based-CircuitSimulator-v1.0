@@ -1,3 +1,6 @@
-verilog work "SignedMultiplier_16bit.v"
-verilog work "SignedFixedPointMultiplier.v"
+verilog work "SEVEN_SEGMENT_LUT.v"
+verilog work "Sevn_segment_display.v"
+verilog work "clock_divider.v"
+verilog work "buck_converter.v"
+verilog work "average.v"
 verilog work "elbertNotGate.v"

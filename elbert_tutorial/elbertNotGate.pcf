@@ -1,4 +1,23 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Fri Apr 07 08:26:42 2017
+// Written by: Map P.20131013 on Wed Apr 26 21:02:07 2017
 //! **************************************************************************
+
+SCHEMATIC START;
+CONFIG VCCAUX = "3.3";
+COMP "B" LOCATE = SITE "P46" LEVEL 1;
+COMP "Clk" LOCATE = SITE "P129" LEVEL 1;
+COMP "SevenSegment_0" LOCATE = SITE "P114" LEVEL 1;
+COMP "SevenSegment_1" LOCATE = SITE "P110" LEVEL 1;
+COMP "SevenSegment_2" LOCATE = SITE "P111" LEVEL 1;
+COMP "SevenSegment_3" LOCATE = SITE "P112" LEVEL 1;
+COMP "SevenSegment_4" LOCATE = SITE "P113" LEVEL 1;
+COMP "SevenSegment_5" LOCATE = SITE "P115" LEVEL 1;
+COMP "SevenSegment_6" LOCATE = SITE "P116" LEVEL 1;
+COMP "SevenSegment_7" LOCATE = SITE "P117" LEVEL 1;
+COMP "Enable_0" LOCATE = SITE "P120" LEVEL 1;
+COMP "Enable_1" LOCATE = SITE "P121" LEVEL 1;
+COMP "Enable_2" LOCATE = SITE "P124" LEVEL 1;
+COMP "Switch_0" LOCATE = SITE "P80" LEVEL 1;
+NET "Clk_BUFGP/IBUFG" PERIOD = 83.3333333 ns HIGH 50%;
+SCHEMATIC END;
 
