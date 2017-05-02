@@ -53,6 +53,9 @@ for i = (1:N)
         v1_vect = [v1_vect v_1];
         v2_vect = [v2_vect v_2];         
         IL_vect = [IL_vect I_L];
+        if(j>=on_time) % because of the diode
+            I_e=0;
+        end
         Ie_vect = [Ie_vect I_e];
     end
 end
