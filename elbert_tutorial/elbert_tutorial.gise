@@ -189,7 +189,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name=".lso"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
@@ -211,6 +213,7 @@
     <transform xil_pn:end_ts="1493220724" xil_pn:in_ck="-1795784361820719110" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="5139328385579788832" xil_pn:start_ts="1493220719">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
       <outfile xil_pn:name="elbertNotGate.bld"/>
@@ -220,6 +223,7 @@
     <transform xil_pn:end_ts="1493220730" xil_pn:in_ck="-1795784361820719109" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="1761500947287708787" xil_pn:start_ts="1493220724">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
@@ -236,6 +240,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
       <outfile xil_pn:name="elbertNotGate.ncd"/>
       <outfile xil_pn:name="elbertNotGate.pad"/>
@@ -250,6 +255,7 @@
     <transform xil_pn:end_ts="1493220749" xil_pn:in_ck="-8836882002603341165" xil_pn:name="TRANEXT_bitFile_spartan3a" xil_pn:prop_ck="8242823369169169445" xil_pn:start_ts="1493220743">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
       <outfile xil_pn:name="elbertNotGate.ut"/>
       <outfile xil_pn:name="elbertnotgate.bgn"/>
@@ -262,6 +268,7 @@
     <transform xil_pn:end_ts="1493220739" xil_pn:in_ck="-1795784361820719241" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1493220736">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
       <outfile xil_pn:name="elbertNotGate.twr"/>
       <outfile xil_pn:name="elbertNotGate.twx"/>
