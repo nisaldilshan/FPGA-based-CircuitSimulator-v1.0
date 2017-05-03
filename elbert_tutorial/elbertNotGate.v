@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module elbertNotGate( Switch_0, Clk, B, clk1, /*v_1_o, v_2i_o, v_2d_o, a,*/ SevenSegment_0, SevenSegment_1, SevenSegment_2, SevenSegment_3, SevenSegment_4, SevenSegment_5, SevenSegment_6, SevenSegment_7, Enable_0, Enable_1, Enable_2);
+module elbertNotGate( Switch_0, Clk, B, clk1, SevenSegment_0, SevenSegment_1, SevenSegment_2, SevenSegment_3, SevenSegment_4, SevenSegment_5, SevenSegment_6, SevenSegment_7, Enable_0, Enable_1, Enable_2);
 	input   Switch_0;
 	input   Clk;
 	output  B;
