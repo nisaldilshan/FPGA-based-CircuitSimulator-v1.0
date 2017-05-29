@@ -77,13 +77,13 @@
          <ClosedNode>/test1 E:|FYP|verilog|buck_sys|test1.v</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>test1 (C:/Users/Nisal Dilshan/Desktop/FYP/ISE projects/buck_sys1/test1.v)</SelectedItem>
+         <SelectedItem>uut - top (C:/Users/Nisal Dilshan/Desktop/FYP/ISE projects/1/FPGA-based-CircuitSimulator-v1.0/Finished verilog - Buck (Simulation Only)/verilog Project/top.v)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000000ad000000020000000000000000000000000200000064ffffffff000000810000000300000002000000ad0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>test1 (C:/Users/Nisal Dilshan/Desktop/FYP/ISE projects/buck_sys1/test1.v)</CurrentItem>
+      <CurrentItem>uut - top (C:/Users/Nisal Dilshan/Desktop/FYP/ISE projects/1/FPGA-based-CircuitSimulator-v1.0/Finished verilog - Buck (Simulation Only)/verilog Project/top.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
