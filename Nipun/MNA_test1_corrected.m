@@ -26,7 +26,7 @@ I_C = 0;
 E_val = 10;
 
 
-N = 10;              %switchings
+N = 25;              %switchings
 sampling = tsw/T;    %sampling per switching period
 on_time = sampling*D;        %switch close time
 
@@ -38,9 +38,9 @@ for i = (1:N)
     for j = (1:sampling)
         
         if(j<on_time) % switching
-            E = E_val;
-        else
             E = 0;
+        else
+            E = E_val;
         end
         
         I_L = I_L  + (v_1-v_2)*T/L;
@@ -69,12 +69,12 @@ x = [v1_vect; v2_vect; Ie_vect];
 %title('v_1');
 
 figure ;
-plot(x(2,1:length(v1_vect)));
+plot(x(2,1:length(v1_vect)),'r','LineWidth',1);
 title('v_2 - MATLAB simulation');
 
-figure ;
-plot(x(3,1:length(v1_vect)));
-title('I_L');
+%figure ;
+%plot(x(3,1:length(v1_vect)));
+%title('I_L');
 
 
 

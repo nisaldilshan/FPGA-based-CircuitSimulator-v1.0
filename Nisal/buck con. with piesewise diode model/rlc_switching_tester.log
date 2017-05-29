@@ -1,0 +1,23 @@
+Circuit: * C:\Users\Nisal Dilshan\Desktop\buck con. with piesewise diode model\rlc_switching_tester.asc
+
+Limiting rise time of source v1 to 0.0005
+Limiting fall time of source v1 to 0.0005
+Direct Newton iteration for .op point succeeded.
+
+Date: Mon May 29 21:00:40 2017
+Total elapsed time: 0.123 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 3109
+traniter = 3104
+tranpoints = 1401
+accept = 1324
+rejected = 77
+matrix size = 6
+fillins = 0
+solver = Normal
+Matrix Compiler1: 146 bytes object code size  0.1/0.0/[0.0]
+Matrix Compiler2: 320 bytes object code size  0.1/0.2/[0.1]
+
