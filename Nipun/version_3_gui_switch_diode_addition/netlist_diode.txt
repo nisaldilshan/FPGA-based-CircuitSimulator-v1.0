@@ -1,0 +1,9 @@
+*diode_simple.asc
+V1 N001 0 PULSE(0 10 0 0 0 .5m 1m)
+R1 N002 0 10
+D1 N001 N002 D
+.model D D(Vd=.8 Rs=.568)
+.lib C:\Users\Nipun\Documents\LTspiceXVII\lib\cmp\standard.dio
+.tran 10m
+.backanno
+.end
