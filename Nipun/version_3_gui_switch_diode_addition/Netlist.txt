@@ -1,0 +1,9 @@
+* simple circuit
+* V1 N001 0 10
+V1 N001 0 PULSE(0 10 0 0 0 .5m 1m)
+R1 N002 0 10
+C1 N002 0 50U
+L1 N001 N002 50m
+.tran 10m 0
+.backanno
+.end

@@ -1,0 +1,9 @@
+* simple switch example
+V1 N003 0 10
+V2 N002 N003 PULSE(0 10 0 0 0 .5m 1m)
+R1 N001 0 10
+S1 N003 N001 N002 N003 SWITCH
+.tran 10m
+.model SWITCH SW(Ron=1p Roff=10MEG Vt=5V Vh=0V)
+.backanno
+.end
