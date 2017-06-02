@@ -1,0 +1,11 @@
+* soft_simple_rlc.asc
+L1 N001 N002 50m
+C1 N002 0 50U
+R1 N002 0 10
+V1 N003 N004 PULSE(0 10 0 0 0 .5m 1m)
+S1 N004 N001 N003 0 SWITCH
+V2 N004 0 10
+.tran 100m
+.model SWITCH SW(Ron=1p Roff=10MEG Vt=5V Vh=0V)
+.backanno
+.end
